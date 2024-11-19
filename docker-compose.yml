@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  lexical_analyzer:
+    build:
+      context: ./lexical_analyzer
+    ports:
+      - "5001:5000"
+    container_name: lexical_analyzer
+
+  parser:
+    build:
+      context: ./parser
+    ports:
+      - "5002:5000"
+    container_name: parser
